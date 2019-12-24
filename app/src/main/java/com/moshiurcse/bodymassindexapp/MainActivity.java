@@ -24,18 +24,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculateResult(View view) {
 
-        int height1=Integer.parseInt(height.getText().toString());
+        int ht=Integer.parseInt(height.getText().toString());
 
-        float meter= (float) ((height1*2.54)/100);
-        float weight1=Float.parseFloat(weight.getText().toString());
+        float meter= (float) ((ht*2.54)/100);
+        float wt=Float.parseFloat(weight.getText().toString());
 
-        float bmi=weight1/(float)(meter*meter);
+        float bmi=wt/(float)(meter*meter);
         if(bmi<=18.5){
-            result.setText("Under weight "+bmi);
+            result.setText("Under weight (<18.5) : "+bmi);
         }else if(bmi>18.5 && bmi<24.9){
-            result.setText("Normal weight "+bmi);
+            result.setText("Normal weight (18.5-25) : "+bmi);
         }else{
-            result.setText("Over weight "+bmi);
+            result.setText("Over weight (>25) : "+bmi);
         }
 
 
